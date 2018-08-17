@@ -1,9 +1,3 @@
-const foo = require("./foo.js");
+const preformatted = require("../../shared/preformatted.js");
 
-exports.isTrue = function() {
-  return true;
-};
-
-exports.sayHey = function() {
-  foo.hey();
-};
+module.exports = preformatted;
