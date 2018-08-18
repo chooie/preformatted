@@ -1,6 +1,6 @@
 {
   "name": "@chooie/preformatted",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Template strings, without the superfluous whitespace.",
   "main": "src/application/shared/preformatted.js",
   "engines": {
@@ -23,7 +23,6 @@
   },
   "author": "Charles Hebert",
   "license": "ISC",
-
   "devDependencies": {
     "browserify": "16.2.0",
     "chromedriver": "2.37.0",
