@@ -1,6 +1,63 @@
 # Preformatted
 Template strings, without the superfluous whitespace.
 
+The indenation is readjusted to be level with whatever the first line's
+indentation is. Leading and trailing whitespace is also removed (blanks and
+newlines).
+
+## Example
+```js
+const preformatted = require("./preformatted.js");
+
+describe("SHARED: Preformatted", function() {
+  it("demonstration", function() {
+    const animal = "cat";
+    const sound = "meow";
+    const normalTemplateString = `
+      The ${animal} goes
+
+      '${sound}'
+    `;
+    console.log();
+    console.log("Normal template string:");
+    console.log(normalTemplateString);
+
+    const preformattedTemplateString = preformatted`
+      The ${animal} goes
+
+      '${sound}'
+    `;
+    console.log("Preformatted template string:");
+    console.log(preformattedTemplateString);
+  });
+});
+```
+
+gives:
+
+```bash
+Normal template string:
+
+      The cat goes
+
+      'meow'
+
+Preformatted template string:
+The cat goes
+
+'meow'
+```
+
+## Install the library
+### NodeJS
+`npm install --save-exact @chooie/preformatted`
+
+### Client
+- Copy `generated/dist/client/bundle.js` to your project and include it in a
+  script tag on the desired page
+- If using Browserify, you can include the source at
+  `src/application/shared/preformatted.js`
+
 ## Development
 View the available tasks to run
 
